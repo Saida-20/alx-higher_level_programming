@@ -72,11 +72,11 @@ class Rectangle:
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-         if not isinstance(rect_2, Rectangle):
-             raise TypeError("rect_2 must be an instance of Rectangle")
-         if rect_1.area() >= rect_2.area():
-             return (rect_1)
-         return (rect_2)
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
 
     def __str__(self):
         """Return the printable representation of the Rectangle.
@@ -100,6 +100,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-         """Print a message for every deletion of a Rectangle."""
-         type(self).number_of_instances -= 1
-         print("Bye rectangle...")
+        """Print a message for every deletion of a Rectangle."""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
